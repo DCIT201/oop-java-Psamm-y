@@ -14,6 +14,6 @@ public class Truck extends Vehicle{
 
 
     public boolean isAvailableForRental() {
-        return false;
+        return isAvailable();
     }
 }

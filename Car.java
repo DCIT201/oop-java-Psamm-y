@@ -1,4 +1,4 @@
-public class Car extends Vehicle{
+public class Car extends Vehicle implements IRentable{
     private String color;
 
     //Constructor for Car with parameters from super class (Vehicle)
@@ -14,5 +14,15 @@ public class Car extends Vehicle{
 
     public boolean isAvailableForRental() {
         return isAvailable();
+    }
+
+    @Override
+    public void rent(int days) {
+
+    }
+
+    @Override
+    public void returnVehicle() {
+
     }
 }

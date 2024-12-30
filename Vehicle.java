@@ -39,12 +39,12 @@ public abstract class Vehicle {
     }
 
 
-    //Constructor
+
     public Vehicle(String vehicleId,String model, double baseRentalRate){
         this.vehicleId=vehicleId;
         this.model=model;
         this.baseRentalRate=baseRentalRate;
-        this.isAvailable=true;
+        this.isAvailable=true; //vehicle is available by default
     }
 
 

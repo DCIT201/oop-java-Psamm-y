@@ -9,7 +9,7 @@ public class Truck extends Vehicle{
 
 
     public double calculateRentalCost(int days) {
-        return getBaseRentalRate()*days+40;
+        return getBaseRentalRate()*days*1.2;
     }
 
 

@@ -17,8 +17,12 @@ public class Car extends Vehicle implements IRentable{
     }
 
     @Override
-    public void rent(int days) {
+    public double rent(int days) {
+        if (isAvailableForRental()){
 
+        }
+        setAvailable(false);
+        return calculateRentalCost(days);
     }
 
     @Override

@@ -19,7 +19,9 @@ public class Car extends Vehicle implements IRentable{
     @Override
     public double rent(int days) {
         if (isAvailableForRental()){
-
+            setAvailable(false); //
+        }else{
+            System.out.println("Car isn't available for rental");
         }
         setAvailable(false);
         return calculateRentalCost(days);
@@ -27,6 +29,7 @@ public class Car extends Vehicle implements IRentable{
 
     @Override
     public void returnVehicle() {
-
+        setAvailable(true);
+        System.out.println("Car returned successfully");
     }
 }

@@ -1,3 +1,5 @@
+package Classes;
+
 public abstract class Vehicle {
     private String vehicleId;
     private String model;

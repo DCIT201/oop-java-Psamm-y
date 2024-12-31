@@ -1,3 +1,6 @@
+package Classes;
+import Interfaces.IRentable;
+
 public class Motorcycle extends Vehicle implements IRentable {
     private boolean isElectric;
     private int speed;
@@ -34,15 +37,15 @@ public class Motorcycle extends Vehicle implements IRentable {
         return isAvailable();
     }
 
-    public void rent(Customer customer,int days){
+    public void rent(Customer customer, int days){
         if(isAvailableForRental()){
             setAvailable(false);
         }else {
-            System.out.println("Motorcycle is not available for rental");
+            System.out.println("Classes.Motorcycle is not available for rental");
         }
     }
     public void returnVehicle(){
         setAvailable(true);
-        System.out.println("Motorcycle return was successful");
+        System.out.println("Classes.Motorcycle return was successful");
     }
 }

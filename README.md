@@ -1,29 +1,29 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Ev761u1o)
 # OOP-JAVA(DCIT 201 - Graded Assignment)
-# Advanced Vehicle Rental Management System
+# Advanced Classes.Vehicle Rental Management System
 
 ## Assignment Objective
-Design a comprehensive Vehicle Rental Management System that demonstrates **ALL** Object-Oriented Programming (OOP) Principles:
+Design a comprehensive Classes.Vehicle Rental Management System that demonstrates **ALL** Object-Oriented Programming (OOP) Principles:
 - Encapsulation
 - Inheritance
 - Polymorphism
 - Abstraction
 - Composition
 
-## Problem Domain: Vehicle Rental Management System
+## Problem Domain: Classes.Vehicle Rental Management System
 
 ### Core Requirements
 
 #### 1. Abstraction Principle
-Create an abstract base class `Vehicle` with the following abstract methods:
+Create an abstract base class `Classes.Vehicle` with the following abstract methods:
 - `calculateRentalCost(int days)`
 - `isAvailableForRental()`
 
 #### 2. Inheritance Hierarchy
-Implement concrete vehicle classes that inherit from `Vehicle`:
-- `Car` (extends Vehicle)
-- `Motorcycle` (extends Vehicle)
-- `Truck` (extends Vehicle)
+Implement concrete vehicle classes that inherit from `Classes.Vehicle`:
+- `Classes.Car` (extends Classes.Vehicle)
+- `Classes.Motorcycle` (extends Classes.Vehicle)
+- `Classes.Truck` (extends Classes.Vehicle)
 
 Each vehicle type must have unique rental characteristics:
 - Different base rental rates
@@ -40,22 +40,22 @@ Each vehicle class must:
 #### 4. Polymorphism Implementation
 Create interfaces and method overriding:
 - `Rentable` interface with methods:
-  - `rent(Customer customer, int days)`
+  - `rent(Classes.Customer customer, int days)`
   - `returnVehicle()`
 - Override methods in each vehicle class
 - Demonstrate method overloading and overriding
 
 #### 5. Composition
 Design supporting classes:
-- `Customer`
-- `RentalAgency`
+- `Classes.Customer`
+- `Classes.RentalAgency`
 - `RentalTransaction`
 
 ### Detailed Class Requirements
 
-#### Vehicle (Abstract Class)
+#### Classes.Vehicle (Abstract Class)
 ```java
-public abstract class Vehicle {
+public abstract class Classes.Vehicle {
     // Private encapsulated fields
     private String vehicleId;
     private String model;
@@ -68,18 +68,18 @@ public abstract class Vehicle {
 }
 ```
 
-#### Vehicle Specific Classes
+#### Classes.Vehicle Specific Classes
 Each vehicle class must implement unique:
 - Rental cost calculations
 - Availability checks
 - Special features
 
-#### Customer Class
+#### Classes.Customer Class
 - Manage customer rental history
 - Track current rentals
 - Implement rental eligibility checks
 
-#### RentalAgency Class
+#### Classes.RentalAgency Class
 - Manage vehicle fleet
 - Process rentals
 - Generate reports

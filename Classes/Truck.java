@@ -1,8 +1,12 @@
-public class Truck extends Vehicle implements IRentable{
+package Classes;
+import Interfaces.IRentable;
+import Classes.Customer;
+
+public class Truck extends Vehicle implements IRentable {
     private int loadCapacity;
     private boolean hasShade;
 
-    //Constructor for Car with parameters from super class (Vehicle)
+    //Constructor for Classes.Car with parameters from super class (Classes.Vehicle)
     public Truck(String vehicleId, String model, double baseRentalRate,int loadCapacity) {
         super(vehicleId, model, baseRentalRate);
         this.loadCapacity=loadCapacity;
@@ -19,15 +23,15 @@ public class Truck extends Vehicle implements IRentable{
         return isAvailable();
     }
 
-    public void rent(Customer customer,int days){
+    public void rent(Customer customer, int days){
         if(isAvailableForRental()){
             setAvailable(false);
         }else {
-            System.out.println("Truck is not available for rental now");
+            System.out.println("Classes.Truck is not available for rental now");
         }
     }
     public void returnVehicle(){
         setAvailable(true);
-        System.out.println("Truck returned successfully");
+        System.out.println("Classes.Truck returned successfully");
     }
 }

@@ -1,4 +1,6 @@
-public class Car extends Vehicle implements IRentable{
+package Classes;
+import Interfaces.IRentable;
+public class Car extends Vehicle implements IRentable {
     private String color;
     public String getColor() {
         return color;
@@ -10,7 +12,7 @@ public class Car extends Vehicle implements IRentable{
 
 
 
-    //Constructor for Car with parameters from super class (Vehicle)
+    //Constructor for Classes.Car with parameters from super class (Classes.Vehicle)
     public Car(String vehicleId, String model, double baseRentalRate,String color) {
         super(vehicleId, model, baseRentalRate);
         this.color=color;
@@ -26,11 +28,11 @@ public class Car extends Vehicle implements IRentable{
     }
 
     @Override
-    public void rent (Customer customer,int days) {
+    public void rent (Customer customer, int days) {
         if (isAvailableForRental()){
             setAvailable(false); //
         }else{
-            System.out.println("Car isn't available for rental");
+            System.out.println("Classes.Car isn't available for rental");
         }
         setAvailable(false);
     }
@@ -38,6 +40,6 @@ public class Car extends Vehicle implements IRentable{
     @Override
     public void returnVehicle() {
         setAvailable(true);
-        System.out.println("Car returned successfully");
+        System.out.println("Classes.Car returned successfully");
     }
 }
